@@ -10,5 +10,5 @@ var host = new HostBuilder()
         services.ConfigureFunctionsApplicationInsights();
     })
     .Build();
-
+//test
 host.Run();
