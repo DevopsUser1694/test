@@ -25,7 +25,7 @@ namespace FunctionAppTest.DAL
                 CreatedBy = "Chandan",
                 CreatedOn = DateTime.Now,
                 ModifiedBy = "Chandan",
-                ModifiedOn = DateTime.Now,
+                ModifiedOn = DateTime.Now
 
             });
 
@@ -36,7 +36,7 @@ namespace FunctionAppTest.DAL
                 CreatedBy = "Amit",
                 CreatedOn = DateTime.Now,
                 ModifiedBy = "Amit",
-                ModifiedOn = DateTime.Now,
+                ModifiedOn = DateTime.Now
 
             });
             modelBuilder.Entity<Item>().HasData(new Item
