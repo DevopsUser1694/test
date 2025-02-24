@@ -23,7 +23,7 @@ namespace FunctionAppTest.Triggers
         public async Task<IActionResult> GetProduct([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
         {
             _logger.LogInformation($"{nameof(GetProduct)} trigger function processed a request.");
-            var products = await _dbContext.Products.ToListAsync();
+            var products = await _dbContext.Products.ToListAsync();            
 
             return new OkObjectResult(JsonSerializer.Serialize(products));
         }
