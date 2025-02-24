@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest    
+    environment: 
+      SA_PASSWORD: "Chandan@123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1400:1433"    
+  azure-function:
+    image: functionapptest
+    environment:
+      - AzureWebJobsStorage=UseDevelopmentStorage=true
+      - SqlConnectionString=Server=host.docker.internal;Database=Test_Db;User Id=sa;Password=Chandan@123;Trusted_Connection=True;TrustServerCertificate=True;
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlserver

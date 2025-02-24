@@ -2,8 +2,13 @@
   "profiles": {
     "FunctionAppTest": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7248",
-      "launchBrowser": false
+      "commandLineArgs": "--port 7248"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 33928,
+      "useSSL": false
     }
   }
 }
